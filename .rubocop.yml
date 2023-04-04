@@ -1,0 +1,29 @@
+AllCops:
+  TargetRubyVersion: 3.1.2
+  NewCops: enable
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Security/Eval:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/CaseLikeIf:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 150
