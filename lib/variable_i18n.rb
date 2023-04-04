@@ -15,11 +15,11 @@ module VariableI18n
     def translate(locale, key, options = {})
       translation = original_translate(locale, key, options)
 
-      if translation.is_a? Array
+      if translation.is_a?(Array) && !translation.frozen?
         translation.each_with_index do |translation_subpart, i|
           translation[i] = replace_variable_in_translation(translation_subpart) if translation_subpart.is_a? String
         end
-      elsif translation.is_a? String
+      elsif translation.is_a?(String) && !translation.frozen?
         translation = replace_variable_in_translation(translation)
       end
 
